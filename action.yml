@@ -1,0 +1,11 @@
+name: 'Setup Mojo'
+description: 'Set up Mojo language'
+inputs:
+  version:
+    description: 'The Mojo version to install'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - run: ./setup-mojo.sh ${{ inputs.version }}
+      shell: bash
